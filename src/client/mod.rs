@@ -384,12 +384,6 @@ impl Client {
     {
         let token = token.as_ref().trim();
 
-        let token = if token.starts_with("Bot ") {
-            token.to_string()
-        } else {
-            format!("Bot {}", token)
-        };
-
         let mut extras = Extras::default();
 
         f(&mut extras);
